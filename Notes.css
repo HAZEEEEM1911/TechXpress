@@ -1,0 +1,30 @@
+*{
+    transition: all 1 ease;
+transition-duration: all ;
+transition: property 2s; ;
+transition-delay: 2s;
+transition-timing-function:cubic-bezier(1,0.1,0) ;
+/*                          */
+transform: rotate((180deg));
+transform: skew(190deg);
+transform: scale(1);
+transform: translate(20px);
+ /*                     */
+ box-shadow: (0,0,0 black);
+text-shadow: 0px 0px 0px black;
+}
+
+.parent{
+    height: 100vh;
+    direction: ltr,rtl;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column,row,row-reverse,column-reverse;
+    justify-content: center,space-between,space-around,space-evenly;
+    align-items: center;
+    align-content: center;
+}
+.child{
+    background-color: antiquewhite;
+    order: 0;
+}

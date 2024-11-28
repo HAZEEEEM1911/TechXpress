@@ -1,0 +1,755 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+img{
+    width: 100%;
+}
+
+.clr{
+    clear: both;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.container{
+    width: 80%;
+    margin: auto;
+}
+.hor{
+    display:flex;
+    flex-wrap: wrap;
+}
+/* ppppppppppppppppp *//*navbar */
+.navbar{
+    background-color: rgb(255, 255, 255);
+    height: 50px;
+    font-size: larger;
+}
+
+.ourLogo{
+    font-weight: 500;
+    color:#000000a6;
+    font-size: larger;
+    transition: 0.3s color;
+}
+.login-button{
+    background-color: #12cf67a6;
+    color: #fff; 
+    font-size: 20px;
+    padding: 10px 25px;
+    border-radius: 60px;
+    text-decoration: none;
+    transition: 0.3s ease-in;
+}
+.login-button:hover{
+    background-color: #021526;
+}
+.navbar-toggler{
+    border: none;
+    font-size: 1.25rem;
+}
+.navbar-toggler:focus, .btn-close:focus{
+    box-shadow: none;
+    outline: none;
+}
+.nav-link {
+    color: #ff1616; /* Default link color */
+    font-weight: 600;
+    font-size: 18px; /* Increased font size */
+    position: relative;
+}
+
+.nav-link.active {
+    color: #ff0c0c; /* Color for the active link */
+}
+
+.nav-link:hover, .nav-link.active {
+    color: #ff0c0c; /* Color when hovered or active */
+}
+
+@media (min-width: 991px) {
+    .nav-link::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background-color: #0073e6;
+        visibility: hidden;
+        transition: width 0.3s ease-in-out; /* Transition effect for the underline */
+    }
+    .nav-link:hover::before, .nav-link.active::before {
+        width: 100%;
+        visibility: visible;
+    }
+}
+/* endnavbar */
+
+
+
+    
+
+/* start home */
+.home{
+    height: 100vh;
+    background-image: url(./IMG/7.jpg.webp);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+.home::after{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background-color: #00000083;
+    width: 100%;
+    height: 100%;
+    inset: 0;
+}
+.home .fontHome{
+    text-align: center;
+    color: #fff;
+}
+.home .fontHome h1{
+    font-size: 66px;
+}
+.home .fontHome p{
+    font-size: 20px;
+}
+
+.fontHome .btn{
+    border: none;
+    background-color:  rgb(165, 161, 161);
+    padding: 14px 30px;
+    margin: 15px 5px;
+    color: #fff;
+    border-radius: 5px;
+    text-transform: capitalize;
+    border: 1px solid #000000 ;
+    cursor: pointer; 
+    transition: background-color 0.3s, color 0.3s; 
+}
+.fontHome .btn:hover {
+    background-color: #e1ebc8; 
+    color: #021526; 
+} 
+.fontHome .btn2{
+    background-color: transparent;
+    border: 1px solid #fff;
+}
+ /* end sec home */
+ .extra{
+    overflow: hidden;
+ }
+
+ /* start phones */
+.product-card h1{
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    color: #ffffff;
+}
+
+.product-card h2 {
+    text-align: center;
+    color: #333; 
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; 
+    gap: 20px;
+    padding: 20px;
+}
+
+.product-card {
+    background-color: #f9f9f9;
+    color: #9b4a4a;
+    border-radius: 10px;
+    padding: 15px;
+    width: 300px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 16px  #333;
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid gray;
+    margin-bottom: 15px;
+}
+
+.price {
+    text-align: center;
+    font-weight: bold;
+   font-size: x-large;
+    margin: 10px 0;
+    color: #333; 
+}
+
+.rating {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.rating span {
+    font-size: 1.5em;
+    color: gold;
+}
+
+.byuBtn {
+    background-color: #6d8baa;
+    color: white;
+    border: none;
+    padding: 10px 0; 
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    display: block;
+    width: 90%; 
+    margin: 10px auto 0 auto; 
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    box-sizing: border-box; 
+}
+.byuBtn:hover {
+    background-color: #5a7490;
+}
+.byuBtn::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 0;
+    height: 100%;
+    background-color: #2c2c2c;
+    transition: all 0.5s;
+    z-index: -1;
+}
+
+.byuBtn:hover::after {
+    width: 100%;
+}
+/* end phones */
+
+.info {
+    padding: 70px 0;
+}
+.info h2 {
+    text-align: center; 
+    color: #0073e6; 
+    font-size: 36px;
+    font-weight: 700; 
+    margin-bottom: 30px; 
+}
+
+.info .hor {
+    display: flex; 
+    justify-content: center;
+}
+
+.info .ver {
+    width: 33.333%;
+    padding: 0 15px;
+    transition: all 0.8s ease-in-out;
+}
+
+.info .ver:hover {
+    transform: scale(1.1);
+}
+
+.info .cart {
+    width: 100%;
+    text-align: center;
+}
+
+.cart img {
+    width: 100%; 
+    height: auto; 
+}
+
+.cart h3 {
+    color: #444444;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.cart span {
+    color: #ff2020;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+
+
+.vip {
+    padding: 80px 0;
+    background-color: #f1f1f1;
+}
+
+.vip .hor {
+    align-items: center;
+}
+
+.vip .ver{
+    width: 50%;
+    padding: 0.15px;
+}
+
+.vip .ver-one {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center; 
+}
+
+.vip .ver-one h2 {
+    color: #0073e6; 
+    font-size: 50px; 
+    padding: 20px 0;
+    font-weight: bold; 
+}
+
+.vip .ver-one p {
+    color: #464646;
+    font-size: 18px; 
+    margin-top: 20px; 
+    margin-bottom: 20px; 
+}
+
+.vip .ver-one .btn {
+    background: #ff2020;
+    font-family: "Josefin Sans", sans-serif;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    padding: 15px 28px; /* Adjusted padding */
+    margin: 0 auto; /* Center button horizontally */
+    border: 0;
+    transition: all 0.5s ease-in-out;
+    display: inline-block; /* Ensures the button retains its box model */
+    cursor: pointer; /* Ensures button appears clickable */
+}
+
+.vip .ver-one .btn:hover {
+    background: #4a4a4b;
+}
+/* start fourth */
+
+
+ .hand {
+    padding: 70px 0;
+}
+.hand h2 {
+    text-align: center; 
+    color: #0073e6; 
+    font-size: 36px;
+    font-weight: 700; 
+    margin-bottom: 30px; 
+}
+
+.hand .hor {
+    display: flex; 
+    justify-content: center;
+}
+
+.hand .ver {
+    width: 33.333%;
+    padding: 0 15px;
+    transition: all 0.8s ease-in-out;
+}
+
+.hand .ver:hover {
+    transform: scale(1.1);
+}
+
+.hand .cart {
+    width: 100%;
+    text-align: center;
+}
+
+.hand img {
+    width: 100%; 
+    height: auto; 
+}
+
+.hand h3 {
+    color: #444444;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.hand span {
+    color: #ff2020;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: "Josefin Sans", sans-serif;
+}
+.last p{
+    font-size: 18px;
+    text-align: center;
+    color: #444444;
+    padding: 3px 0px 7px 0px;
+    font-weight: 500;
+}
+.no{
+    overflow: hidden;
+
+}
+
+/* .final h3 {
+    color: #444444;
+    font-weight: 700;
+    font-size: 24px;
+} */
+
+.final span {
+    color: #960000;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.gameBtn{
+        background-color: #222121;
+        color: white;
+        border: none;
+        padding: 10px 0; 
+        cursor: pointer;
+        font-size: 1em;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+        display: block;
+        width: 90%; 
+        margin: 10px auto 0 auto; 
+        text-align: center;
+        position: relative;
+        z-index: 1;
+        box-sizing: border-box; 
+    }
+    .gameBtn:hover {
+        background-color: rgb(255, 255, 255);
+    }
+    .gameBtn::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        width: 0;
+        height: 100%;
+        background-color: #043a35;
+        transition: all 0.5s;
+        z-index: -1;
+    }
+    
+    .gameBtn:hover::after {
+        width: 100%;
+    }
+
+    .popularBtn{
+        background-color: #32064e;
+        color: white;
+        border: none;
+        padding: 10px 0; 
+        cursor: pointer;
+        font-size: 1em;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+        display: block;
+        width: 90%; 
+        margin: 10px auto 0 auto; 
+        text-align: center;
+        position: relative;
+        z-index: 1;
+        box-sizing: border-box; 
+    }
+    .popularBtn:hover {
+        background-color: #ff49b3;
+    }
+    .popularBtn::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        width: 0;
+        height: 100%;
+        background-color: #ecb500;
+        transition: all 0.5s;
+        z-index: -1;
+    }
+    
+    .popularBtn:hover::after {
+        width: 100%;
+    }
+    /* background-color */
+    .info{
+        background-color: #F7F7F7;
+    }
+    .popular{
+        background-color: #F6F5F2;
+
+    }
+    .Gameing{
+        background-color: #FFF6F6;
+    }
+    .final{
+       background-color:  #E4EFE7;
+    }
+    .popular p{
+        font-size: 25px;
+        text-align: center;
+
+    }
+    
+    .Gameing .btn {
+        background: #FA7070;
+        font-family: "Josefin Sans", sans-serif;
+        text-transform: uppercase;
+        color: #fff;
+        font-weight: 600;
+        letter-spacing: 0.03em;
+        padding: 15px 28px; /* Adjusted padding */
+        margin: 0 auto; /* Center button horizontally */
+        border: 0;
+        transition: all 0.5s ease-in-out;
+        display: inline-block; /* Ensures the button retains its box model */
+     font-size: large;
+        cursor: pointer; /* Ensures button appears clickable */
+    }
+    
+    .Gameing .btn:hover {
+        background: #530606;
+    }
+    
+    footer .container{
+        max-width: 1170px;
+     
+       margin: auto;
+        
+    }
+    .rore{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    footer ul{
+        list-style: none;
+    }
+    .footeer{
+        background-color: #24262b;
+        padding: 70px 0;
+    }
+    .footeer-col{
+        width: 25%;
+        padding: 0 15px;
+    }
+    .footeer-col  h4{
+        font-size: 22px;
+        color: #ffffff;
+        text-transform: capitalize;
+        margin-bottom: 35px;
+        line-height: 1.5;
+        font-family:'poppins',sans-serif;
+        font-weight: 600;
+        position: relative;
+    }
+    .footeer-col h4::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -12px;
+        background-color:#e91e63;
+        height: 4px;
+        box-sizing: border-box;
+        width: 50px;
+    }
+    .footeer-col ul li{
+        margin-bottom: 10px;
+    }
+    .footeer-col ul li a{
+        font-size: 20px;
+        text-transform: capitalize;
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: 350;
+        color: #bbbbbb;
+        transition: all 0.3s ease;
+    }
+    .footeer-col ul li a:hover{
+        color: #ffffff;
+        padding-left: 8px;
+    }
+    .footer-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 40px;
+        padding-top: 20px;
+        border-top: 1px solid #bbbbbb;
+        color: #bbbbbb;
+        font-size: 16px;
+    }
+    
+    .footer-bottom p {
+        margin: 0;
+    }
+    
+    .social-icons a {
+        color: #bbbbbb;
+        font-size: 18px;
+        margin-right: 15px;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+    
+    .social-icons a:hover {
+        color: #ffffff;
+    }
+    .btn_Speacil {
+        background: #6d0505;
+        font-family: "Josefin Sans", sans-serif;
+        text-transform: uppercase;
+        color: #fff;
+        font-weight: 600;
+        letter-spacing: 0.03em;
+        padding: 15px 28px; /* Adjusted padding */
+        margin: 0 auto; /* Center button horizontally */
+        border: 0;
+        transition: all 0.5s ease-in-out;
+        display: inline-block; /* Ensures the button retains its box model */
+        cursor: pointer; /* Ensures button appears clickable */
+        text-decoration: none;
+    }
+    
+    .btn_Speacil:hover {
+        background: #030368;
+    }
+    .New_Arrivals span {
+        color: #960000;
+        font-size: 20px;
+        font-weight: 700;
+        font-family: "Josefin Sans", sans-serif;
+    }
+    .popular span {
+        color: #960000;
+        font-size: 20px;
+        font-weight: 700;
+        font-family: "Josefin Sans", sans-serif;
+
+    }
+
+
+
+    
+    
+
+
+
+   
+    
+
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .vip{
+    width: 200px;
+    height: 200px;
+    background-color: #6d8baa;
+    animation-name:  animate1;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    position: absolute;
+    left: 0%;
+    top: 0%;
+
+}
+/* @keyframes animate1 {
+    0%{
+        left: 0%;
+
+    }
+    50%{
+        left: 100%;
+        top: 100%;
+        background-color: chartreuse;
+    }
+    100%{
+        left: 0%;
+    } */
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:800px) {
+    .body{
+        background-color: #3C2A21;
+    }
+}
+@media screen and (max-width:768px) {
+    .card{
+        width: 50%;
+    }
+}

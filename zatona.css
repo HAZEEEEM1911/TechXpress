@@ -1,0 +1,328 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+img{
+    width: 100%;
+}
+
+.clr{
+    clear: both;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.container{
+    width: 80%;
+    margin: auto;
+}
+.hor{
+    display:flex;
+    flex-wrap: wrap;
+}
+/*navbar */
+.navbar{
+    background-color: rgb(255, 255, 255);
+    height: 50px;
+    font-size: larger;
+}
+
+.ourLogo{
+    font-weight: 500;
+    color:#000000a6;
+    font-size: larger;
+    transition: 0.3s color;
+}
+.login-button{
+    background-color: #12cf67a6;
+    color: #fff; 
+    font-size: 20px;
+    padding: 10px 25px;
+    border-radius: 60px;
+    text-decoration: none;
+    transition: 0.3s ease-in;
+}
+.login-button:hover{
+    background-color: #021526;
+}
+.navbar-toggler{
+    border: none;
+    font-size: 1.25rem;
+}
+.navbar-toggler:focus, .btn-close:focus{
+    box-shadow: none;
+    outline: none;
+}
+.nav-link {
+    color: #ff1616; /* Default link color */
+    font-weight: 600;
+    font-size: 18px; /* Increased font size */
+    position: relative;
+}
+
+.nav-link.active {
+    color: #ff0c0c; /* Color for the active link */
+}
+
+.nav-link:hover, .nav-link.active {
+    color: #ff0c0c; /* Color when hovered or active */
+}
+
+@media (min-width: 991px) {
+    .nav-link::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background-color: #0073e6;
+        visibility: hidden;
+        transition: width 0.3s ease-in-out; /* Transition effect for the underline */
+    }
+    .nav-link:hover::before, .nav-link.active::before {
+        width: 100%;
+        visibility: visible;
+    }
+}
+/* endnavbar */
+
+/* layout1 */
+.layout1{
+    padding: 70px 0;
+}
+.layout1h2 {
+    text-align: center; 
+    color: #0073e6; 
+    font-size: 36px;
+    font-weight: 700; 
+    margin-bottom: 30px; 
+}
+
+.layout1 .hor {
+    display: flex; 
+    justify-content: center;
+}
+
+.layout1 .ver {
+    width: 33.333%;
+    padding: 0 15px;
+    transition: all 0.8s ease-in-out;
+}
+
+.layout1.ver:hover {
+    transform: scale(1.1);
+}
+
+.layout1 .cart {
+    width: 100%;
+    text-align: center;
+}
+
+.layout1 img {
+    width: 100%; 
+    height: auto; 
+}
+
+.layout1 h3 {
+    color: #444444;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.cart span {
+    color: #ff2020;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: "Josefin Sans", sans-serif;
+}
+.popularBtn{
+    background-color: #32064e;
+    color: white;
+    border: none;
+    padding: 10px 0; 
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    display: block;
+    width: 90%; 
+    margin: 10px auto 0 auto; 
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    box-sizing: border-box; 
+}
+.popularBtn:hover {
+    background-color: #ff49b3;
+}
+.popularBtn::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 0;
+    height: 100%;
+    background-color: #ecb500;
+    transition: all 0.5s;
+    z-index: -1;
+}
+
+.popularBtn:hover::after {
+    width: 100%;
+}
+/* end layout1 */
+/* 
+ layout2 */
+.layout2 {
+    padding: 70px 0;
+}
+.layout2 h2 {
+    text-align: center; 
+    color: #0073e6; 
+    font-size: 36px;
+    font-weight: 700; 
+    margin-bottom: 30px; 
+}
+
+.layout2 .hor {
+    display: flex; 
+    justify-content: center;
+}
+
+.layout2 .ver {
+    width: 33.333%;
+    padding: 0 15px;
+    transition: all 0.8s ease-in-out;
+}
+
+.layout2 .ver:hover {
+    transform: scale(1.1);
+}
+
+.layout2.cart {
+    width: 100%;
+    text-align: center;
+}
+
+.layout2 img {
+    width: 100%; 
+    height: auto; 
+}
+
+.layout2 h3 {
+    color: #444444;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.layout2 span {
+    color: #ff2020;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: "Josefin Sans", sans-serif;
+}
+.layout2 p{
+    font-size: 18px;
+    text-align: center;
+    color: #444444;
+    padding: 3px 0px 7px 0px;
+    font-weight: 500;
+}
+.no{
+    overflow: hidden;}
+    .New_Arrivals span {
+        color: #960000;
+        font-size: 20px;
+        font-weight: 700;
+        font-family: "Josefin Sans", sans-serif;
+    }
+
+    /* end layout2*/
+
+    footer .container{
+        max-width: 1170px;
+     
+       margin: auto;
+        
+    }
+    .rore{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    footer ul{
+        list-style: none;
+    }
+    .footeer{
+        background-color: #24262b;
+        padding: 70px 0;
+    }
+    .footeer-col{
+        width: 25%;
+        padding: 0 15px;
+    }
+    .footeer-col  h4{
+        font-size: 22px;
+        color: #ffffff;
+        text-transform: capitalize;
+        margin-bottom: 35px;
+        line-height: 1.5;
+        font-family:'poppins',sans-serif;
+        font-weight: 600;
+        position: relative;
+    }
+    .footeer-col h4::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -12px;
+        background-color:#e91e63;
+        height: 4px;
+        box-sizing: border-box;
+        width: 50px;
+    }
+    .footeer-col ul li{
+        margin-bottom: 10px;
+    }
+    .footeer-col ul li a{
+        font-size: 20px;
+        text-transform: capitalize;
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: 350;
+        color: #bbbbbb;
+        transition: all 0.3s ease;
+    }
+    .footeer-col ul li a:hover{
+        color: #ffffff;
+        padding-left: 8px;
+    }
+    .footer-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 40px;
+        padding-top: 20px;
+        border-top: 1px solid #bbbbbb;
+        color: #bbbbbb;
+        font-size: 16px;
+    }
+    
+    .footer-bottom p {
+        margin: 0;
+    }
+    
+    .social-icons a {
+        color: #bbbbbb;
+        font-size: 18px;
+        margin-right: 15px;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+    
+    .social-icons a:hover {
+        color: #ffffff;
+    };
